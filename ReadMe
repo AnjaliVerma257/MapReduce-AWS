@@ -1,0 +1,42 @@
+Given the following data input (all words separated by tab or space, line by line)
+
+Data sources (make  10 or more copies of the following file into your input directory)
+https://s3.amazonaws.com/uf-eel6935/data/bible.gz (Links to an external site.)
+
+develop a MapReduce program using AWS or Google Cloud to achieve the following objectives:
+
+Task 1 (10 points). Count one-word frequency as in the wordcount example. (This is required. Copy/paste source code is allowed.)
+Task 2 (50 points). Count double-word frequency. For example, "I am given an opportunity to use EC2 so I am very happy and very happy and very happy." The output would be something as follows (in any reasonable order):
+
+I am 2
+am given 1
+given an 1
+an opportunity 1
+opportunity to 1
+to use 1
+use EC2 1
+EC2 so 1
+so I 1
+am very 1
+very happy 3
+happy and 2
+andy very 2
+
+
+Task 3 (40 points). Using DistributedCache. Find frequency of one-words in another given list (attached, word-patterns.txtPreview the documentView in a new window ).
+It is to use the given list to find one-word frequency in bible.gz. For example, small list has "hello world gator".  Then you need to find frequency of "hello", "world", and "gator" in bible.gz.
+
+Requirements:
+
+* Please use non-streaming style programs (either Java, or C++ via Hadoop Pipes)
+* Please use no less than 3 VM instances
+
+Some references:
+
+(Google for "MapReduce Tutorial" etc)
+
+
+Submissions:
+1. Your program, well docoumented in code and in Readme.doc (the document should include a link to AWS outputdata), and screenshots of running process and results
+2. Results (explain the results)
+3. Screenshots (several key steps on AWS or GCE)
